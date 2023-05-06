@@ -219,6 +219,19 @@ div .line {
   color: hsl(var(--lightColor));
 }
 
+.yellow {
+  background-color: hsl(var(--primaryColor));
+  width: 100vw;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.shadow {
+  box-shadow: 15px 10px 1px 1px hsl(var(--primaryColor));
+}
+
 /* //// */
 /* Main */
 /* //// */
@@ -253,6 +266,7 @@ button {
   transition: 200ms;
   max-width: 350px;
   margin: 15px auto;
+  text-transform: uppercase;
 }
 
 button:hover {
@@ -261,6 +275,11 @@ button:hover {
 }
 
 .banner-logo {
+  margin: auto;
+}
+
+.logo-img {
+  width: clamp(315px, 370px, 100%);
   margin: auto;
 }
 
@@ -285,26 +304,107 @@ button:hover {
 
 .circle {
   position: absolute;
-  right: -100px;
+  right: -210px;
   bottom: -150px;
   z-index: 1;
   border-radius: 50%;
   background: hsl(var(--primaryColor)) url(assets/bg-manga.jpg) no-repeat 30%
     40%;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   background-blend-mode: multiply;
   background-size: 800px 1900px;
+}
+
+/* .line-above {
+  border-bottom: 3px solid hsl(var(--primaryColor));
+} */
+.line-above {
+  position: relative;
+  max-width: 350px;
+  margin: auto;
+}
+
+.line-above::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: clamp(150px, 50vw, 80%);
+  margin: auto;
+  height: 5px;
+  background-color: hsl(var(--primaryColor));
 }
 
 /* Galeria - 3 sessao */
 
 .section__galery {
   text-align: center;
+  padding: 30px 0;
 }
 
 .section__galery img {
   border-radius: 20px;
+}
+
+.img06,
+.img11,
+.img13,
+.img03,
+.img01,
+.img10 {
+  display: none;
+}
+
+/* Agendamento - 4 sessao */
+
+.section__agendamento {
+  flex-direction: row;
+  text-align: center;
+}
+
+.section__agendamento > * {
+  flex-direction: column;
+}
+
+.section__agendamento h2 {
+  max-width: inherit;
+}
+
+.box {
+  border-radius: 5%;
+  margin: 30px auto;
+  width: fit-content;
+  max-width: 500px;
+  padding: 15px;
+  background-color: rgba(90, 90, 90, 0.027);
+  box-shadow: 10px 10px 1px 1px hsl(var(--primaryColor));
+}
+
+.box img {
+  width: auto;
+  height: 100px;
+  margin: 20px auto;
+}
+
+.box .lista-1::before {
+  content: "1";
+  display: block;
+  font-size: 2rem;
+  font-family: "Splash", cursive;
+}
+.box .lista-2::before {
+  content: "2";
+  display: block;
+  font-size: 2rem;
+  font-family: "Splash", cursive;
+}
+.box .lista-3::before {
+  content: "3";
+  display: block;
+  font-size: 2rem;
+  font-family: "Splash", cursive;
 }
 
 @media (min-width: 768px) {
@@ -391,6 +491,30 @@ button:hover {
     grid-column: 2 / 3;
     grid-row: 1 / 1;
   }
+
+  .img06,
+  .img11,
+  .img13,
+  .img03,
+  .img01,
+  .img10 {
+    display: inherit;
+  }
+
+  /* 4 sessao */
+
+  .section__agendamento > * {
+    flex-direction: row;
+  }
+
+  .boxes {
+    justify-content: space-between;
+  }
+
+  .box {
+    width: 270px;
+    margin: 30px 15px;
+  }
 }
 
 @media (min-width: 769px) and (min-width: 1199px) {
@@ -405,17 +529,25 @@ button:hover {
 
 @media (min-width: 1200px) {
   .banner-img-profile {
-    display: inline;
+    display: inline-block;
     border-radius: 50%;
     transition: 1s;
+    max-height: 400px;
   }
 
   .section__about {
     padding: 30px;
   }
 
+  .profile {
+    justify-content: center;
+  }
+
   .circle {
-    bottom: -100px;
+    bottom: -450px;
+    right: -450px;
+    width: 600px;
+    height: 600px;
   }
 
   /* Galery */
@@ -480,5 +612,11 @@ button:hover {
     transform: scale(2);
     -webkit-transform: scale(2);
     cursor: zoom-out;
+  }
+
+  /* 4 sessao */
+
+  .box {
+    width: 350px;
   }
 }
