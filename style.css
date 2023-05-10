@@ -10,6 +10,7 @@
 :root {
   --primaryColor: 39, 100%, 46%;
   --secondaryColor: 266, 90%, 33%;
+  --secondaryColorDarker: 263, 100%, 19%;
   --darkColor: 0, 0%, 0%;
   --lightColor: 0, 0%, 100%;
 
@@ -30,6 +31,10 @@ body {
 body,
 html {
   overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .gap {
@@ -309,9 +314,8 @@ button {
 }
 
 button:hover {
-  background-color: hsl(var(--primaryColor));
-  color: hsl(var(--darkColor));
-  border: 3px solid hsl(var(--primaryColor));
+  background-color: hsl(var(--secondaryColorDarker));
+  border: 3px solid hsl(var(--secondaryColorDarker));
 }
 
 .section__gallery button:hover {
@@ -336,7 +340,8 @@ button:hover {
 }
 
 .button-secondary:hover {
-  background-color: hsl(var(--primaryColor));
+  color: hsl(var(--lightColor));
+  background-color: hsl(var(--secondaryColorDarker));
 }
 
 .banner-logo {
@@ -575,35 +580,19 @@ button:hover {
 .mapa-iframe {
   width: 500px;
   max-width: 100%;
-  height: 250px;
+  height: 380px;
   margin: auto;
 }
 
-.agenda-iframe-semanal,
+/* .agenda-iframe-semanal,
 .agenda-iframe-mensal {
   filter: invert(0.9) saturate(0.5) hue-rotate(145deg);
   max-width: 100%;
   height: 400px;
-}
-
-.contato p {
-  align-self: center;
-  margin-left: 10px;
-}
-
-.contato div {
-  padding: 5px 0;
-  border-bottom: 2px solid transparent;
-}
-
-.contato div:hover {
-  border-bottom: 2px solid black;
-}
+} */
 
 /* Form */
-form {
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.247);
-  border-radius: 5px;
+/* form {
   padding: 30px;
 }
 
@@ -641,6 +630,8 @@ form,
   flex-direction: column;
   justify-content: left;
   align-items: left;
+  background-color: white;
+  border-radius: 5px;
 }
 
 label {
@@ -658,21 +649,18 @@ label span {
 
 .right span {
   margin-bottom: 5px;
-}
-.form-group:has(:invalid:not(:focus):not(:placeholder-shown))
-  .form-group__error {
+} */
+
+/* Mensagem de erro input email */
+/* .form-group:has(:invalid:not(:focus):not(:placeholder-shown)) .error {
   display: block;
-}
-.form-group:has(:focus) .form-group__error,
-.form-group:has(:placeholder-shown:not(:focus)) .form-group__error {
-  display: none;
 }
 
 .form-group__input {
   position: relative;
 }
 
-.form-group__error {
+.error {
   display: none;
   white-space: nowrap;
   position: absolute;
@@ -683,17 +671,57 @@ label span {
   font-size: 12px;
 }
 
+.form-group:has(:focus) .error,
+.form-group:has(:placeholder-shown:not(:focus)) .error {
+  display: none;
+} */
+
+/* Contato */
+
+.contato article img {
+  filter: invert(97%) sepia(87%) saturate(1%) hue-rotate(280deg)
+    brightness(111%) contrast(101%);
+}
+
+.contato .max-container {
+  justify-content: space-between;
+  max-width: 1000px;
+}
+
+.contato-items {
+  margin-left: 0;
+}
+
+.contato p {
+  align-self: center;
+  margin-left: 10px;
+}
+
+.contato .logo-img {
+  width: 150px;
+  margin: auto 0;
+}
+
+.contato article div {
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.contato article div:hover {
+  border-bottom: 2px solid hsl(var(--primaryColor));
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  .form-group:has(:valid) label span {
-    animation: wave 0.25s calc(var(--index) * 0.05s);
+  /* .form-group:has(:valid) label span {
+    animation: wave 0.25s 5;
+  } */
+
+  input:invalid {
+    animation: shake 0.2s;
   }
 
   .form-group:has(:invalid:not(:focus)) {
     animation: shake 0.2s;
-  }
-
-  .form-group__error {
-    animation: show-error 0.1s 0.2s both;
   }
 
   .form-group:has(:placeholder-shown:not(:focus)),
@@ -701,15 +729,13 @@ label span {
     animation: none;
   }
 
+  .error {
+    animation: show-error 0.1s 0.2s both;
+  }
+
   @keyframes show-error {
     0% {
       transform: translate(-50%, -100%) scale(0);
-    }
-  }
-
-  @keyframes wave {
-    50% {
-      transform: translateY(-50%);
     }
   }
 
@@ -922,7 +948,8 @@ label span {
   /* Contato */
   .contato {
     flex-direction: row;
-    justify-content: space-around;
+    gap: 30px;
+    justify-content: space-between;
   }
 
   /* Form */
@@ -940,9 +967,9 @@ label span {
   }
 
   .top-button {
-    font-size: 3rem;
-    width: 60px;
-    height: 60px;
+    font-size: 2.5rem;
+    width: 55px;
+    height: 55px;
   }
 }
 
@@ -1037,8 +1064,9 @@ label span {
 
   /* Contato */
   .mapa-iframe {
-    width: 700px;
-    height: 300px;
+    min-width: 100%;
+    width: 900px;
+    height: 380px;
   }
 
   /* Form */
