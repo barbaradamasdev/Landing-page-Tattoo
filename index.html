@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tatuagem geek em Recife. Fazemos anime, super herois além de trabalhos em fineline. Veja alguns nos meus trabalhos e vem marcar a pele com uma arte autoral e personalida.">
     <link rel="stylesheet" href="style.css">
     <title>Ink Roby - Tattoo Geek Recife</title>
 </head>
 <body>
     
+    <!-- Header / Nav -->
     <header>
-        <nav class="flex max-container" id="nav" style="padding: 15px 30px;">
-            <div class="nav-primary ff-ink fs-logo" id="logo">Ink Roby</div>
+        <nav id="nav" class="flex max-container">
+            <div id="logo" class="primary ff-ink fs-logo">Ink Roby</div>
 
-            <div class="nav-secondary flex" id="nav-secondary" style="z-index: 99;">
-                <ul class="links flex" id="links">
+            <div id="nav-secondary" class="secondary flex" style="z-index: 99;">
+                <ul id="links" class="links flex">
                     <li><a class="fs-nav" onclick="toggleMenu()" href="#topo">Inicio</a></li>
                     <li><a class="fs-nav" onclick="toggleMenu()" href="#sobre">Sobre</a></li>
                     <li><a class="fs-nav" onclick="toggleMenu()" href="#galeria">Galeria</a></li>
@@ -26,9 +28,9 @@
                 </div>
             </div>
 
-            <div id="close-menu" onclick="toggleMenu()"></div>
+            <div id="close-menu" onclick="toggleMenu()"></div> <!-- Para fechar menu quando clicar fora (mobile) -->
 
-            <div class="nav-button flex" onclick="toggleMenu()">
+            <div class="button flex" onclick="toggleMenu()" title="Botão para abrir o menu"> <!-- Hamburguer menu -->
                 <div class="line" id="line-up"></div>
                 <div class="line" id="line-off"></div>
                 <div class="line" id="line-down"></div>
@@ -37,223 +39,184 @@
     </header>
 
     <main>
-       <section id="topo" class="flex section__intro max-container margin-lateral">
-            <article class="column text gap">
+        <!-- Intro / topo -->
+       <section id="topo" class="flex intro max-container margin-lateral">
+            <article class="text flex">
                 <img class="logo-img" src="assets/logo2.png" alt="Logo Inky Roby">
-                <p class="fs-h3">Especialista em geek tattoo</p>
+                <h1>Especialista em geek tattoo</h1>
                 <div class='flex intro-buttons'>
-                    <a href="#contato"><button>Agendar horário</button></a>
-                    <a href="#galeria"><button class="button-secondary">Ver galeria</button></a>
+                    <a href="#contato"><button title="Botão que levará a sessão de agendamento">Agendar horário</button></a>
+                    <a href="#galeria"><button class="button-secondary" title="Botão que levará a galeria de fotos">Ver galeria</button></a>
                 </div>
             </article>
-            <article class="column imagens">
-                <img class="banner-img-02 shadow" src="assets/images/tattoo-zoro2.jpg" alt="">
+            <article class="imagens">
+                <img class="banner-img-02 shadow" src="assets/images/tattoo-zoro2.jpg" alt="Tatuagem de Zoro de One piece">
            </article>
         </section>
 
+        <!-- About / Sobre -->
        <section id="sobre" class="flex black">
-            <div class="section__about max-container gap">
-                <article class="column text gap">
-                    <h2 class="fs-h2 about line-above uppercase">Sobre Roby</h2>
+            <div class="about max-container flex">
+                <article class="text flex">
+                    <h2 class="line-above uppercase">Sobre Roby</h2>
                     <p class="fs-text">Minhas tatuagens são personalizadas para cada cliente, levando em consideração suas ideias e estilo pessoal. Com uma vasta experiência em diversos estilos de tatuagem, posso criar algo verdadeiramente único para você.</p>
                     <p class="fs-text">Sempre fui apaixonado por desenho e anime, juntei minhas duas paixoes para criar trabalhos unicos.
                         Sempre fui apaixonado por desenho e anime, juntei minhas duas paixoes para criar trabalhos unicos.
                     </p>
                 </article>
-                <article class="column profile flex">
-                    <img class="banner-img-profile shadow" src="assets/profile1.jpeg" alt="Roby Vieira">
+                <article class="profile flex">
+                    <img class="banner-img-profile shadow" src="assets/profile1.jpeg" alt="Perfil de Roby Vieira">
                 </article>
-                <span class="circle"></span>
+                <span class="circle-manga"></span>
             </div>
         </section>
 
-        <section id="galeria" class="yellow flex section__gallery gap">
-            <h2 class="fs-h2 line-above uppercase">Portfólio</h2>
-            <article class="grid gallery gap max-container margin-lateral">
-                <img class="img02" id="img02" src="assets/images/tattoo-dama-e-vagabundo.jpg" alt="">  <!-- onclick="zoom(img02)" -->
-                <img class="img04" id="img04" src="assets/images/tattoo-zoro.jpg" alt="">  <!-- onclick="zoom(img04)" -->
-                <img class="img05" id="img05" src="assets/images/tattoo-momonosuke2.jpg" alt="">  <!-- onclick="zoom(img05)" -->
-                <img class="img07" id="img07" src="assets/images/tattoo-one-piece.jpg" alt="">  <!-- onclick="zoom(img07)" -->
-                <img class="img08" id="img08" src="assets/images/tattoo-caveira.jpg" alt="">  <!-- onclick="zoom(img08)" -->
-                <img class="img09" id="img09" src="assets/images/tattoo-chopper2.jpg" alt="">  <!-- onclick="zoom(img09)" -->
-                <img class="img01" id="img01" src="assets/images/tattoo-boy.jpg" alt="">  <!-- onclick="zoom(img01)" -->
-                <img class="img06" id="img06" src="assets/images/tattoo-cavaleiros.jpg" alt="">  <!-- onclick="zoom(img06)" -->
-                <img class="img10" id="img10" src="assets/images/tattoo-luffy2.jpg" alt="">  <!-- onclick="zoom(img10)" -->
-                <img class="img11" id="img11" src="assets/images/tattoo-minnie2.jpg" alt="">  <!-- onclick="zoom(img11)" -->
-                <img class="img12" id="img12" src="assets/images/tattoo-mix.jpg" alt="">  <!-- onclick="zoom(img12)" -->
-                <img class="img13" id="img13" src="assets/images/tattoo-robot.jpg" alt="">  <!-- onclick="zoom(img13)" -->
-                <img class="img03" id="img03" src="assets/images/tattoo-zoro2.jpg" alt="">  <!-- onclick="zoom(img03)" -->
+        <!-- Galeria -->
+        <section id="galeria" class="yellow gallery flex">
+            <h2 class="line-above uppercase">Portfólio</h2>
+            <article class="grid max-container margin-lateral">
+                <img class="img02" id="img02" src="assets/images/tattoo-dama-e-vagabundo.jpg" alt="Tatuagem de Dama de o vagabundo">  <!-- onclick="zoom(img02)" -->
+                <img class="img04" id="img04" src="assets/images/tattoo-zoro.jpg" alt="Tatuagem de Zoro de one piece">  <!-- onclick="zoom(img04)" -->
+                <img class="img05" id="img05" src="assets/images/tattoo-momonosuke2.jpg" alt="Tatuagem de Momonosuke de one piece">  <!-- onclick="zoom(img05)" -->
+                <img class="img07" id="img07" src="assets/images/tattoo-one-piece.jpg" alt="Tatuagem de one piece">  <!-- onclick="zoom(img07)" -->
+                <img class="img08" id="img08" src="assets/images/tattoo-caveira.jpg" alt="Tatuagem de caveira">  <!-- onclick="zoom(img08)" -->
+                <img class="img09" id="img09" src="assets/images/tattoo-chopper2.jpg" alt="Tatuagem de Chopper de one piece">  <!-- onclick="zoom(img09)" -->
+                <img class="img01" id="img01" src="assets/images/tattoo-boy.jpg" alt="Tatuagem de menino">  <!-- onclick="zoom(img01)" -->
+                <img class="img06" id="img06" src="assets/images/tattoo-cavaleiros.jpg" alt="Tatuagem de Cavaleiros do zodiaco">  <!-- onclick="zoom(img06)" -->
+                <img class="img10" id="img10" src="assets/images/tattoo-luffy2.jpg" alt="Tatuagem de Luffy de one piece">  <!-- onclick="zoom(img10)" -->
+                <img class="img11" id="img11" src="assets/images/tattoo-minnie2.jpg" alt="Tatuagem de Minnie">  <!-- onclick="zoom(img11)" -->
+                <img class="img12" id="img12" src="assets/images/tattoo-mix.jpg" alt="Mix de tatuagens geek">  <!-- onclick="zoom(img12)" -->
+                <img class="img13" id="img13" src="assets/images/tattoo-robot.jpg" alt="Tatuagem de robo">  <!-- onclick="zoom(img13)" -->
+                <img class="img03" id="img03" src="assets/images/tattoo-zoro2.jpg" alt="Tatuagem de Zoro de one piece">  <!-- onclick="zoom(img03)" -->
             </article>
-            <button id="showMore" onclick="showMore()">Ver mais</button>
+            <button id="showMore" onclick="showMore()" title="Botão que mostrará mais imagens">Ver mais</button>
         </section>
 
-        <section id="comoagendar" class="section__agendamento max-container margin-lateral">
-            <h2 class="fs-h2 line-above uppercase">Como decidir sua tattoo?</h2>
+        <!-- Passo a passo -->
+        <section id="passoapasso" class="passoapasso max-container margin-lateral">
+            <h2 class="line-above uppercase">Como decidir sua tattoo?</h2>
             <article class="flex boxes">
-                <article class="box flex gap shadow">
+                <article class="box flex shadow">
                     <h3 class="lista-1 uppercase">Tipo da tatuagem</h3>
                     <p class="fs-text">Você pode ter já uma ideia do trabalho que você quer ou do tema para inspirar na nossa criação.</p>
                 </article>
-                <article class="box flex gap shadow">
+                <article class="box flex shadow">
                     <h3 class="lista-2 uppercase">Entre em contato</h3>
                     <p class="fs-text">Agende um horário pelo nosso <a href="https://wa.me/5581995723625">whatsapp.</a></p>
                 </article>
-                <article class="box flex gap shadow">
+                <article class="box flex shadow">
                     <h3 class="lista-3 uppercase">Agendamento</h3>
                     <p class="fs-text">Agenda um horário pessoalmente para fecharmos sua ideia e fixar na pele a arte personalizada.</p>
                 </article>
             </article>
-            <span class="circle"></span>
+            <span class="circle-manga"></span>
         </section>
 
-        <section id="autorais" class="black section__autorais flex">
-            <div class="flex gap max-container">
-                <article class="flex text gap max-container">
-                    <h2 class="fs-h2 line-above uppercase">Desenhos autorais</h2>
+        <!-- Autorais -->
+        <section id="autorais" class="black autorais flex">
+            <div class="flex max-container">
+                <article class="flex text max-container">
+                    <h2 class="line-above uppercase">Desenhos autorais</h2>
                     <p class="fs-text">Crio o desenho do tema escolhido, de forma totalmente personalizada.</p>
                     <article class="flex gallery-autorais">
-                        <img class="shadow" src="assets/desenhos/autoral03.jpg" alt="">
-                        <img class="shadow" src="assets/desenhos/autoral04.jpg" alt="">
+                        <img class="shadow" src="assets/desenhos/autoral03.jpg" alt="Desenho autoral de Sanji de one piece">
+                        <img class="shadow" src="assets/desenhos/autoral04.jpg" alt="Desenho autoral de Nezuko de Demon Slayer">
                     </article>
                 </article>
                 <video src="assets/desenhos/autoral01.mp4" autoplay loop muted></video>
             </div>
         </section>
 
-        <section id="depoimentos" class="flex section__depoimentos">
-            <div class="flex gap max-container">
-                <article class="flex text gap max-container margin-lateral">
-                    <h2 class="fs-h2 line-above uppercase">Depoimentos</h2>
-                    <article class="flex depoimentos-box gap">
-                        <div class="depoimento flex">
-                            <h3>Babi</h3>
-                            <h4>Blackwork, Anime</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsa dicta? Facilis aut dolore nesciunt quos accusamus saepe eos nam quia iusto possimus, officiis repellat voluptates eveniet sunt culpa porro.</p>
-                            <div class="stars flex">
-                                <img src="assets/icons/icons8-estrela-94.png">
-                                <img src="assets/icons/icons8-estrela-94.png">
-                                <img src="assets/icons/icons8-estrela-94.png">
-                                <img src="assets/icons/icons8-estrela-94.png">
-                                <img src="assets/icons/icons8-estrela-94.png">
-                            </div>
-                            <img class="depoimento-img" src="assets/images/tattoo-momonosuke2.jpg" alt="">
+        <!-- Depoimentos / Feedback -->
+        <section id="depoimentos" class="flex depoimentos max-container">
+            <article class="flex text max-container margin-lateral">
+                <h2 class="line-above uppercase">Depoimentos</h2>
+                <article class="flex depoimentos-box">
+                    <div class="box flex">
+                        <h3>Babi</h3>
+                        <h4>Blackwork, Anime</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsa dicta? Facilis aut dolore nesciunt quos accusamus saepe eos nam quia iusto possimus, officiis repellat voluptates eveniet sunt culpa porro.</p>
+                        <div class="stars flex">
+                            <img alt="5 Estrelas de avaliação" src="assets/icons/icons8-estrela-94.png">
+                            <img alt="5 Estrelas de avaliação" src="assets/icons/icons8-estrela-94.png">
+                            <img alt="5 Estrelas de avaliação" src="assets/icons/icons8-estrela-94.png">
+                            <img alt="5 Estrelas de avaliação" src="assets/icons/icons8-estrela-94.png">
+                            <img alt="5 Estrelas de avaliação" src="assets/icons/icons8-estrela-94.png">
                         </div>
-                        <div class="depoimento flex">
-                            <h3>Jaime</h3>
-                            <h4>Colorido, Disney</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsa dicta? Facilis aut dolore nesciunt quos accusamus saepe eos nam quia iusto possimus, officiis repellat voluptates eveniet sunt culpa porro.</p>
-                            <div class="stars flex">
-                                <img src="assets/icons/icons8-estrela-94.png">
-                                <img src="assets/icons/icons8-estrela-94.png">
-                                <img src="assets/icons/icons8-estrela-94.png">
-                                <img src="assets/icons/icons8-estrela-94.png">
-                                <img src="assets/icons/icons8-estrela-94.png">
-                            </div>
-                            <img class="depoimento-img" src="assets/images/tattoo-minnie2.jpg" alt="">
+                        <img class="depoimento-img" src="assets/images/tattoo-momonosuke2.jpg" alt="Tatuagem de momonosuke de one piece">
+                    </div>
+                    <div class="box flex">
+                        <h3>Jaime</h3>
+                        <h4>Colorido, Disney</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsa dicta? Facilis aut dolore nesciunt quos accusamus saepe eos nam quia iusto possimus, officiis repellat voluptates eveniet sunt culpa porro.</p>
+                        <div class="stars flex">
+                            <img alt="5 Estrelas de avaliação" src="assets/icons/icons8-estrela-94.png">
+                            <img alt="5 Estrelas de avaliação" src="assets/icons/icons8-estrela-94.png">
+                            <img alt="5 Estrelas de avaliação" src="assets/icons/icons8-estrela-94.png">
+                            <img alt="5 Estrelas de avaliação" src="assets/icons/icons8-estrela-94.png">
+                            <img alt="5 Estrelas de avaliação" src="assets/icons/icons8-estrela-94.png">
                         </div>
-                        <div class="depoimento flex">
-                            <h3>Thais</h3>
-                            <h4>Blackwork, fineline</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsa dicta? Facilis aut dolore nesciunt quos accusamus saepe eos nam quia iusto possimus, officiis repellat voluptates eveniet sunt culpa porro.</p>
-                            <div class="stars flex">
-                                <img src="assets/icons/icons8-estrela-94.png">
-                                <img src="assets/icons/icons8-estrela-94.png">
-                                <img src="assets/icons/icons8-estrela-94.png">
-                                <img src="assets/icons/icons8-estrela-94.png">
-                                <img src="assets/icons/icons8-estrela-94.png">
-                            </div>
-                            <img class="depoimento-img" src="assets/images/tattoo-mix.jpg" alt="">
+                        <img class="depoimento-img" src="assets/images/tattoo-minnie2.jpg" alt="Tatuagem de Minne">
+                    </div>
+                    <div class="box flex">
+                        <h3>Thais</h3>
+                        <h4>Blackwork, fineline</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, ipsa dicta? Facilis aut dolore nesciunt quos accusamus saepe eos nam quia iusto possimus, officiis repellat voluptates eveniet sunt culpa porro.</p>
+                        <div class="stars flex">
+                            <img alt="5 Estrelas de avaliação" src="assets/icons/icons8-estrela-94.png">
+                            <img alt="5 Estrelas de avaliação" src="assets/icons/icons8-estrela-94.png">
+                            <img alt="5 Estrelas de avaliação" src="assets/icons/icons8-estrela-94.png">
+                            <img alt="5 Estrelas de avaliação" src="assets/icons/icons8-estrela-94.png">
+                            <img alt="5 Estrelas de avaliação" src="assets/icons/icons8-estrela-94.png">
                         </div>
-                    </article>
+                        <img class="depoimento-img" src="assets/images/tattoo-mix.jpg" alt="Mix de tatuagens geek">
+                    </div>
                 </article>
-            </div>
+            </article>
         </section>
-
-        <a href="#top"><button class="top-button">➣</button></a>
     </main>
 
-    <footer id="contato" class="yellow section__contato margin-lateral gap">
-        <h2 class="fs-h2 text line-above uppercase">Contato</h2>
-        <div class="flex contato max-container gap">
-            <div class="flex gap contato-items max-container">
+    <!-- Contato / Mapa -->
+    <footer id="contato" class="yellow contato margin-lateral flex">
+        <h2 class="text line-above uppercase">Contato</h2>
+        <div class="flex info max-container">
+            <div class="flex info-items max-container">
                 <h3>Dúvidas e agendamento:</h3>
                 <a class="flex" href="http://wa.me/5581995723625">
                     <div class="flex">
-                        <img class="icon-menor" src="assets/icons/icons8-whatsapp-50.png" alt="">
+                        <img class="icon-menor" alt="Icone do whatsapp" src="assets/icons/icons8-whatsapp-50.png">
                         <p>Whatsapp</p>
                     </div>
                 </a>
 
                 <a class="flex" href=“tel:558195723625”>
                     <div class="flex">
-                        <img class="icon-maior" src="assets/icons/icons8-telefone-80.png" alt="">
+                        <img class="icon-maior" alt="Icone do telefone" src="assets/icons/icons8-telefone-80.png">
                         <p>81 9572-3625</p>
                     </div>
                 </a>
 
-                <a class="flex" href="https://www.google.com/maps/place/Studio+Biz+Tattoo,+Galeria+S%C3%A3o+Paulo+II+-+R.+S%C3%A3o+Sebasti%C3%A3o,+853+-+Sala+4+-+Piedade,+Jaboat%C3%A3o+dos+Guararapes+-+PE,+54410-500/@-8.182639,-34.926399,16z/data=!4m6!3m5!1s0x7aae1b3a8c3a16b:0x1bc2000d25317ea4!8m2!3d-8.1826392!4d-34.9263989!16s%2Fg%2F11p67kw9ln?hl=pt-BR&gl=BR">
+                <a class="flex " href="https://www.google.com/maps/place/Studio+Biz+Tattoo,+Galeria+S%C3%A3o+Paulo+II+-+R.+S%C3%A3o+Sebasti%C3%A3o,+853+-+Sala+4+-+Piedade,+Jaboat%C3%A3o+dos+Guararapes+-+PE,+54410-500/@-8.182639,-34.926399,16z/data=!4m6!3m5!1s0x7aae1b3a8c3a16b:0x1bc2000d25317ea4!8m2!3d-8.1826392!4d-34.9263989!16s%2Fg%2F11p67kw9ln?hl=pt-BR&gl=BR">
                     <div class="flex">
-                        <img class="icon-maior" src="assets/icons/icons8-localização-mundial-50.png" alt="">
+                        <img class="icon-maior" alt="Icone do endereço" src="assets/icons/icons8-localização-mundial-50.png">
                         <p>Endereço</p>
                     </div>
                 </a>
 
                 <a class="flex" href="https://www.instagram.com/inkroby/">
                     <div class="flex">
-                        <img class="icon-menor" src="assets/icons/icons8-instagram-50.png" alt="">
+                        <img class="icon-menor" alt="Icone do Instagram" src="assets/icons/icons8-instagram-50.png">
                         <p>Instagram</p>
                     </div>
                 </a>
             </div>
 
-            <article class="flex mapa gap">
-                <iframe class="mapa-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.199585857924!2d-34.92639889999999!3d-8.182639199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7aae1b3a8c3a16b%3A0x1bc2000d25317ea4!2sStudio%20Biz%20Tattoo!5e0!3m2!1spt-BR!2sbr!4v1683639916963!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <article class="flex mapa">
+                <iframe title="Mapa com localização do studio" class="mapa-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.199585857924!2d-34.92639889999999!3d-8.182639199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7aae1b3a8c3a16b%3A0x1bc2000d25317ea4!2sStudio%20Biz%20Tattoo!5e0!3m2!1spt-BR!2sbr!4v1683639916963!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </article>
-
-            <!-- Form desabilitado -->
-            <!-- <div class="flex gap form max-container"> -->
-                <!-- <form action="https://api.staticforms.xyz/submit" onsubmit="formsent()" method="post" class="flex">
-                    <input type="hidden" name="accessKey" value="9675fa10-e35a-4e75-b9c3-1424d7b35949">
-
-                    <div class="form-group flex">
-                      <label for="text" class="form-label left">
-                        <span aria-hidden="true">Nome</span>
-                      </label>
-                      <div class="form-group__input">
-                        <input required type="text" name="name" id="text" class="form-input" title="Insira seu nome" placeholder="Insira seu nome" />
-                      </div>
-
-                      <label for="email" class="form-label form-label-email">
-                        <span aria-hidden="true">Email</span>
-                      </label>
-                      <div class="form-group__input">
-                        <input required type="text" name="email" id="email" class="form-input" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Insira o seu email" placeholder="Insira o seu email" />
-                        <div class="error">Coloque um email válido!</div>
-                      </div>
-
-                      <label for="phone" class="form-label">
-                        <span aria-hidden="true">Telefone</span>
-                      </label>
-                      <div class="form-group__input">
-                        <input required type="text" name="phone" id="phone" class="form-input" title="Telefone ou celular" placeholder="Telefone ou celular" />
-                      </div>
-                    </div>
-
-                    <label for="text" class="form-label right flex">
-                        <span aria-hidden="true">Mensagem</span>
-                      <div class="form-group__input">
-                        <textarea required name="message" id="text" class="form-input" title="Mande suas duvidas e informações sobre a tatuagem" placeholder="Informações"></textarea>
-                      </div>
-                      <button type="submit" value="Submit">Enviar</button>
-                    </label>
-
-                    <p id="formenviado">enviado</p>
-                </form> -->
-                <!-- <iframe class="agenda-iframe-semanal" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23F09300&ctz=UTC&showTitle=0&showNav=1&showTz=0&showCalendars=0&showTabs=0&showPrint=0&hl=pt_BR&mode=WEEK&title=Agendamento%20semanal&src=Y2EyY2RjZGRmYTU2MmJhZDA0NWUwZTA3YTQ2YmQ1NjVhNWM3N2U1Njk1NmI1MGM3MzE2NGY5ZmMyM2ZmN2QxZUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23C0CA33" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe> -->
-                <!-- <iframe class="agenda-iframe-mensal" src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23F09300&ctz=UTC&showTitle=0&showNav=1&showTz=0&showCalendars=0&showTabs=0&showPrint=0&src=Y2EyY2RjZGRmYTU2MmJhZDA0NWUwZTA3YTQ2YmQ1NjVhNWM3N2U1Njk1NmI1MGM3MzE2NGY5ZmMyM2ZmN2QxZUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23C0CA33" style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe> -->
-            <!-- </div> -->
-            
+                    
         </div>
+        <a href="#top"><button class="top-button">➣</button></a> <!-- Button para subir ao inicio -->
     </footer>
 
     <script type="text/javascript" src="script.js"></script>
