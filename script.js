@@ -16,13 +16,13 @@ function scrollFunction() {
       document.getElementById("nav").style.transition = "1s";
       document.getElementById("logo").style.fontSize = "25px";
       document.getElementById("logo").style.transition = "1s";
-      document.getElementById("nav-secondary").style.top = "52px";
-      document.getElementById("close-menu").style.top = "57px";
+      document.getElementById("nav-secondary").style.top = "65px";
+      document.getElementById("close-menu").style.top = "65px";
     } else {
         document.getElementById("nav").style.padding = "15px 30px";
         document.getElementById("logo").style.fontSize = "clamp(25px, 6vw, 35px)";
-        document.getElementById("nav-secondary").style.top = "83px";
-        document.getElementById("close-menu").style.top = "83px";
+        document.getElementById("nav-secondary").style.top = "99px";
+        document.getElementById("close-menu").style.top = "99px";
     }
   }
 

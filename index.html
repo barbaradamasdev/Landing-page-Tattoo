@@ -10,10 +10,10 @@
 </head>
 <body>
     
-    <!-- Header / Nav -->
-    <header>
+    <!-- Header / Nav ---------------------------------------------------->
+    <header class="black">
         <nav id="nav" class="flex max-container">
-            <div id="logo" class="primary ff-ink fs-logo">Ink Roby</div>
+            <div id="logo" class="primary">Ink Roby</div>
 
             <div id="nav-secondary" class="secondary flex" style="z-index: 99;">
                 <ul id="links" class="links flex">
@@ -39,26 +39,26 @@
     </header>
 
     <main>
-        <!-- Intro / topo -->
+        <!-- Intro / topo ---------------------------------------------------->
        <section id="topo" class="flex intro max-container margin-lateral">
             <article class="text flex">
                 <img class="logo-img" src="assets/logo2.png" alt="Logo Inky Roby">
                 <h1>Especialista em geek tattoo</h1>
                 <div class='flex intro-buttons'>
-                    <a href="#contato"><button title="Botão que levará a sessão de agendamento">Agendar horário</button></a>
+                    <a href="#contato"><button class="button-primary" title="Botão que levará a sessão de agendamento">Agendar horário</button></a>
                     <a href="#galeria"><button class="button-secondary" title="Botão que levará a galeria de fotos">Ver galeria</button></a>
                 </div>
             </article>
-            <article class="imagens">
+            <article>
                 <img class="banner-img-02 shadow" src="assets/images/tattoo-zoro2.jpg" alt="Tatuagem de Zoro de One piece">
            </article>
         </section>
 
-        <!-- About / Sobre -->
+        <!-- About / Sobre ---------------------------------------------------->
        <section id="sobre" class="flex black">
             <div class="about max-container flex">
                 <article class="text flex">
-                    <h2 class="line-above uppercase">Sobre Roby</h2>
+                    <h2>Sobre Roby</h2>
                     <p class="fs-text">Minhas tatuagens são personalizadas para cada cliente, levando em consideração suas ideias e estilo pessoal. Com uma vasta experiência em diversos estilos de tatuagem, posso criar algo verdadeiramente único para você.</p>
                     <p class="fs-text">Sempre fui apaixonado por desenho e anime, juntei minhas duas paixoes para criar trabalhos unicos.
                         Sempre fui apaixonado por desenho e anime, juntei minhas duas paixoes para criar trabalhos unicos.
@@ -71,9 +71,9 @@
             </div>
         </section>
 
-        <!-- Galeria -->
+        <!-- Galeria --------------------------------------------------->
         <section id="galeria" class="yellow gallery flex">
-            <h2 class="line-above uppercase">Portfólio</h2>
+            <h2>Portfólio</h2>
             <article class="grid max-container margin-lateral">
                 <img class="img02" id="img02" src="assets/images/tattoo-dama-e-vagabundo.jpg" alt="Tatuagem de Dama de o vagabundo">  <!-- onclick="zoom(img02)" -->
                 <img class="img04" id="img04" src="assets/images/tattoo-zoro.jpg" alt="Tatuagem de Zoro de one piece">  <!-- onclick="zoom(img04)" -->
@@ -89,12 +89,12 @@
                 <img class="img13" id="img13" src="assets/images/tattoo-robot.jpg" alt="Tatuagem de robo">  <!-- onclick="zoom(img13)" -->
                 <img class="img03" id="img03" src="assets/images/tattoo-zoro2.jpg" alt="Tatuagem de Zoro de one piece">  <!-- onclick="zoom(img03)" -->
             </article>
-            <button id="showMore" onclick="showMore()" title="Botão que mostrará mais imagens">Ver mais</button>
+            <button id="showMore" onclick="showMore()" class="button-primary" title="Botão que mostrará mais imagens">Ver mais</button>
         </section>
 
-        <!-- Passo a passo -->
+        <!-- Passo a passo ---------------------------------------------------->
         <section id="passoapasso" class="passoapasso max-container margin-lateral">
-            <h2 class="line-above uppercase">Como decidir sua tattoo?</h2>
+            <h2>Como decidir sua tattoo?</h2>
             <article class="flex boxes">
                 <article class="box flex shadow">
                     <h3 class="lista-1 uppercase">Tipo da tatuagem</h3>
@@ -112,11 +112,11 @@
             <span class="circle-manga"></span>
         </section>
 
-        <!-- Autorais -->
+        <!-- Autorais ---------------------------------------------------->
         <section id="autorais" class="black autorais flex">
             <div class="flex max-container">
                 <article class="flex text max-container">
-                    <h2 class="line-above uppercase">Desenhos autorais</h2>
+                    <h2>Desenhos autorais</h2>
                     <p class="fs-text">Crio o desenho do tema escolhido, de forma totalmente personalizada.</p>
                     <article class="flex gallery-autorais">
                         <img class="shadow" src="assets/desenhos/autoral03.jpg" alt="Desenho autoral de Sanji de one piece">
@@ -127,10 +127,10 @@
             </div>
         </section>
 
-        <!-- Depoimentos / Feedback -->
+        <!-- Depoimentos / Feedback ---------------------------------------------------->
         <section id="depoimentos" class="flex depoimentos max-container">
             <article class="flex text max-container margin-lateral">
-                <h2 class="line-above uppercase">Depoimentos</h2>
+                <h2>Depoimentos</h2>
                 <article class="flex depoimentos-box">
                     <div class="box flex">
                         <h3>Babi</h3>
@@ -176,9 +176,9 @@
         </section>
     </main>
 
-    <!-- Contato / Mapa -->
-    <footer id="contato" class="yellow contato margin-lateral flex">
-        <h2 class="text line-above uppercase">Contato</h2>
+    <!-- Contato / Mapa / Footer ---------------------------------------------------->
+    <footer id="contato" class="yellow contato margin-lateral text flex">
+        <h2>Contato</h2>
         <div class="flex info max-container">
             <div class="flex info-items max-container">
                 <h3>Dúvidas e agendamento:</h3>
@@ -192,11 +192,11 @@
                 <a class="flex" href=“tel:558195723625”>
                     <div class="flex">
                         <img class="icon-maior" alt="Icone do telefone" src="assets/icons/icons8-telefone-80.png">
-                        <p>81 9572-3625</p>
+                        <p>81 99572-3625</p>
                     </div>
                 </a>
 
-                <a class="flex " href="https://www.google.com/maps/place/Studio+Biz+Tattoo,+Galeria+S%C3%A3o+Paulo+II+-+R.+S%C3%A3o+Sebasti%C3%A3o,+853+-+Sala+4+-+Piedade,+Jaboat%C3%A3o+dos+Guararapes+-+PE,+54410-500/@-8.182639,-34.926399,16z/data=!4m6!3m5!1s0x7aae1b3a8c3a16b:0x1bc2000d25317ea4!8m2!3d-8.1826392!4d-34.9263989!16s%2Fg%2F11p67kw9ln?hl=pt-BR&gl=BR">
+                <a class="flex" href="https://www.google.com/maps/place/Studio+Biz+Tattoo,+Galeria+S%C3%A3o+Paulo+II+-+R.+S%C3%A3o+Sebasti%C3%A3o,+853+-+Sala+4+-+Piedade,+Jaboat%C3%A3o+dos+Guararapes+-+PE,+54410-500/@-8.182639,-34.926399,16z/data=!4m6!3m5!1s0x7aae1b3a8c3a16b:0x1bc2000d25317ea4!8m2!3d-8.1826392!4d-34.9263989!16s%2Fg%2F11p67kw9ln?hl=pt-BR&gl=BR">
                     <div class="flex">
                         <img class="icon-maior" alt="Icone do endereço" src="assets/icons/icons8-localização-mundial-50.png">
                         <p>Endereço</p>
