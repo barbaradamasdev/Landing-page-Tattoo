@@ -394,7 +394,8 @@ h2::after {
 
 .logo-img {
   width: fit-content;
-  max-width: 260px;
+  max-width: 180px;
+  max-height: 270px;
   margin: auto;
 }
 
@@ -644,10 +645,6 @@ h2::after {
 
   /* Intro */
 
-  .logo-img {
-    width: 100%;
-  }
-
   .intro {
     flex-direction: row;
     gap: 50px;
@@ -825,6 +822,11 @@ h2::after {
 
   nav .social-media {
     margin-right: 0;
+  }
+
+  .logo-img {
+    max-width: 250px;
+    max-height: 540px;
   }
 
   /* Circle manga */
