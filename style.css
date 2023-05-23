@@ -393,7 +393,8 @@ h2::after {
 /* -----------------------------*/
 
 .logo-img {
-  width: 260px;
+  width: fit-content;
+  max-width: 260px;
   margin: auto;
 }
 
@@ -425,7 +426,7 @@ h2::after {
   border-radius: 20px;
 }
 
-.img03,
+/* .img03,
 .img13,
 .img11,
 .img12,
@@ -445,7 +446,7 @@ h2::after {
 .img06.active,
 .img01.active {
   display: inherit;
-}
+} */
 
 /* -----------------------------*/
 /* -----Passos - 4 section------*/
