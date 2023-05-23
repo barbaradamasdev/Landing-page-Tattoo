@@ -18,11 +18,13 @@ function scrollFunction() {
       document.getElementById("logo").style.transition = "1s";
       document.getElementById("nav-secondary").style.top = "65px";
       document.getElementById("close-menu").style.top = "65px";
+      document.getElementById("top-button").style.display ='inherit';
     } else {
         document.getElementById("nav").style.padding = "15px 30px";
         document.getElementById("logo").style.fontSize = "clamp(25px, 6vw, 35px)";
         document.getElementById("nav-secondary").style.top = "99px";
         document.getElementById("close-menu").style.top = "99px";
+        document.getElementById("top-button").style.display ='none';
     }
   }
 

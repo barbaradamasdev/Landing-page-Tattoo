@@ -561,6 +561,7 @@ h2::after {
 
 .icon-maior {
   width: 40px;
+  height: fit-content;
 }
 
 .icon-menor {
@@ -594,7 +595,12 @@ h2::after {
   flex-direction: row;
 }
 
+.agenda {
+  max-width: 100%;
+}
+
 .top-button {
+  display: none;
   position: fixed;
   bottom: 0;
   right: 10px;
@@ -795,6 +801,10 @@ h2::after {
     height: 55px;
     font-size: 2rem;
   }
+
+  .agenda {
+    height: 400px;
+  }
 }
 
 /* -----------------------------*/
@@ -802,12 +812,14 @@ h2::after {
 /* -----------------------------*/
 @media (min-width: 1000px) {
   /* Header */
+
   nav .links {
     gap: 50px;
   }
 
   #nav-secondary {
     width: 70vw;
+    max-width: 1000px;
   }
 
   nav .social-media {
@@ -827,6 +839,11 @@ h2::after {
     bottom: -380px;
     width: 600px;
     height: 600px;
+  }
+
+  /* Intro */
+  .intro {
+    max-width: 1330px;
   }
 
   /* Gallery */
