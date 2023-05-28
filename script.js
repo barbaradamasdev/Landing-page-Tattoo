@@ -38,12 +38,12 @@ function scrollFunction() {
   const buttonLeft = document.getElementById('slideLeft');
 
   buttonRight.onclick = function () {
-    /* document.getElementById('gallery-slide').scrollBy (-350, 0); */
-    document.getElementById('gallery-slide').scrollLeft += 20;
+    document.getElementById('gallery-slide').scrollBy (450, 0);
+    /* document.getElementById('gallery-slide').scrollLeft += 20; */
   };
   buttonLeft.onclick = function () {
-    /* document.getElementById('gallery-slide').scrollBy (350, 0); */
-    document.getElementById('gallery-slide').scrollLeft -= 20;
+    document.getElementById('gallery-slide').scrollBy (-450, 0);
+    /* document.getElementById('gallery-slide').scrollLeft -= 20; */
   };
 
   /* function showMore() {
