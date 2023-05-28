@@ -32,7 +32,21 @@ function scrollFunction() {
     element.classList.toggle('active');
   } */
 
-  function showMore() {
+  
+
+  const buttonRight = document.getElementById('slideRight');
+  const buttonLeft = document.getElementById('slideLeft');
+
+  buttonRight.onclick = function () {
+    /* document.getElementById('gallery-slide').scrollBy (-350, 0); */
+    document.getElementById('gallery-slide').scrollLeft += 20;
+  };
+  buttonLeft.onclick = function () {
+    /* document.getElementById('gallery-slide').scrollBy (350, 0); */
+    document.getElementById('gallery-slide').scrollLeft -= 20;
+  };
+
+  /* function showMore() {
     document.getElementById('img01').classList.toggle('active');
     document.getElementById('img02').classList.toggle('active');
     document.getElementById('img03').classList.toggle('active');
@@ -47,7 +61,7 @@ function scrollFunction() {
     document.getElementById('img12').classList.toggle('active');
     document.getElementById('img13').classList.toggle('active');
     document.getElementById('showMore').style.display ='none';
-  }
+  } */
 
   function formsent() {
     document.getElementById('formenviado').classList.toggle('active');

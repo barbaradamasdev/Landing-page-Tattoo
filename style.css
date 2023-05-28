@@ -191,6 +191,23 @@ button:hover {
   background-size: 800px 1900px;
 }
 
+.button-arrow {
+  width: 47px;
+  height: 47px;
+  padding: 0;
+  border-radius: 50%;
+  z-index: 1;
+  font-size: 1.8rem;
+}
+
+.top-button {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  transform: rotate(-90deg);
+}
+
 /* -----------------------------*/
 /* ---------- Header -----------*/
 /* -----------------------------*/
@@ -418,23 +435,75 @@ h2::after {
 /* -----Gallery - 3 section-----*/
 /* -----------------------------*/
 
-.gallery article {
+#gallery-slide::-webkit-scrollbar {
+  display: none;
+}
+
+#gallery-slide {
+  position: relative;
+  width: 80vw;
+  height: 500px;
   display: flex;
-  flex-direction: row;
-  overflow-y: scroll;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  align-items: center;
+  gap: 15px;
+  padding: 0 30px;
+}
+
+#gallery-slide ul {
+  list-style: none;
+  position: relative;
+  width: 754px;
+  height: 292px;
+  margin: 0;
+  padding: 0;
+}
+
+#gallery-slide ul li {
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+  left: 377px;
+  top: 147px;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 3px solid black;
+  cursor: pointer;
+}
+
+#gallery-slide > ul > li > img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+}
+
+/* .child {
+  min-width: 200px !important;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+} */
+
+.arrow {
+  position: absolute;
+}
+
+.slideRight {
+  right: 10px;
+  top: 300px;
+}
+
+.slideLeft {
+  left: 10px;
+  top: 300px;
+  transform: rotate(180deg);
 }
 
 #showMore {
   display: none;
-}
-
-.gallery article {
-  gap: 20px;
-  padding: 0 30px;
-}
-
-.gallery img {
-  border-radius: 20px;
 }
 
 /* .img03,
@@ -611,20 +680,6 @@ h2::after {
   max-width: 100%;
 }
 
-.top-button {
-  display: none;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  width: 47px;
-  height: 47px;
-  padding: 0;
-  border-radius: 50%;
-  transform: rotate(-90deg);
-  z-index: 1;
-  font-size: 1.8rem;
-}
-
 /* -----------------------------*/
 /* -----------Tablet------------*/
 /* -----------------------------*/
@@ -706,7 +761,7 @@ h2::after {
 
   /* Gallery */
 
-  .gallery {
+  /* .gallery {
     padding-top: 50px;
     padding-bottom: 50px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -726,7 +781,7 @@ h2::after {
 
   .img09 {
     display: inherit;
-  }
+  } */
 
   /* Passo a passo */
 
@@ -861,11 +916,15 @@ h2::after {
 
   /* Gallery */
 
-  .gallery img {
+  /* .gallery img {
     min-height: 387px;
-    height: 100% !important;
-  }
+    height: 500px !important;
+  } */
 
+  .arrow {
+    top: 380px;
+  }
+  /* 
   .img02 {
     grid-column: 3 / 5;
     grid-row: 1 / 3;
@@ -884,7 +943,7 @@ h2::after {
   .img12 {
     grid-column: 4 / 5;
     grid-row: 4 / 6;
-  }
+  } */
 
   /* Depoimentos */
 
