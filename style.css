@@ -41,6 +41,7 @@ body,
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scroll-padding-top: 30px;
 }
 
 .max-container {
@@ -100,19 +101,9 @@ p {
 /* -----------------------------*/
 
 /* Padding top for anchor link */
-#sobre {
+section {
   padding-top: 60px;
   padding-bottom: 60px;
-}
-
-#galeria,
-#passoapasso,
-#autorais,
-#depoimentos,
-#contato,
-#agenda {
-  padding-top: 90px;
-  padding-bottom: 90px;
 }
 
 /* Display */
@@ -128,13 +119,20 @@ p {
 
 /* Color bg and shadow */
 .black {
-  background-color: hsl(var(--darkColor), 0.88);
+  background-color: hsl(var(--darkColor), 0.95);
   color: hsl(var(--lightColor));
 }
 
 .yellow {
-  background-color: hsl(var(--primaryColor));
+  background-color: hsl(var(--primaryColor), 0.95);
+  /* color: hsl(var(--lightColor)); */
 }
+
+/* .yellow .icon-maior,
+.yellow .icon-menor {
+  filter: invert(85%) sepia(97%) saturate(5060%) hue-rotate(335deg)
+    brightness(103%) contrast(104%);
+} */
 
 .purple {
   background-color: hsl(var(--secondaryColor));
@@ -189,6 +187,23 @@ button:hover {
   height: 300px;
   background-blend-mode: multiply;
   background-size: 800px 1900px;
+}
+
+.button-arrow {
+  width: 47px;
+  height: 47px;
+  padding: 0;
+  border-radius: 50%;
+  z-index: 1;
+  font-size: 1.8rem;
+}
+
+.top-button {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  transform: rotate(-90deg);
 }
 
 /* -----------------------------*/
@@ -418,23 +433,54 @@ h2::after {
 /* -----Gallery - 3 section-----*/
 /* -----------------------------*/
 
-.gallery article {
+.wrapper {
   display: flex;
   flex-direction: row;
-  overflow-y: scroll;
+  align-items: center;
+}
+
+.gallery-slide {
+  max-width: 1390px;
+  gap: 15px;
+  grid-auto-flow: column;
+  grid-auto-columns: 71%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  /* padding: 0 30px; */
+}
+
+.gallery-slide .child {
+  border: 3px solid rgb(0, 0, 0);
+  inline-size: 100%;
+  aspect-ratio: 16 / 25; /* Size of card */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.gallery-slide::-webkit-scrollbar {
+  display: none;
+}
+
+.arrow {
+  width: 47px;
+  height: 47px;
+  font-size: 1rem;
+  top: 300px;
+  padding: 10px;
+  margin: auto 10px;
+}
+
+.slideRight {
+  right: 10px;
+}
+
+.slideLeft {
+  left: 10px;
+  transform: rotate(180deg);
 }
 
 #showMore {
   display: none;
-}
-
-.gallery article {
-  gap: 20px;
-  padding: 0 30px;
-}
-
-.gallery img {
-  border-radius: 20px;
 }
 
 /* .img03,
@@ -611,20 +657,6 @@ h2::after {
   max-width: 100%;
 }
 
-.top-button {
-  display: none;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  width: 47px;
-  height: 47px;
-  padding: 0;
-  border-radius: 50%;
-  transform: rotate(-90deg);
-  z-index: 1;
-  font-size: 1.8rem;
-}
-
 /* -----------------------------*/
 /* -----------Tablet------------*/
 /* -----------------------------*/
@@ -706,26 +738,17 @@ h2::after {
 
   /* Gallery */
 
-  .gallery {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+  .gallery-slide {
+    grid-auto-columns: 31%;
   }
 
-  .gallery img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
+  .arrow {
+    opacity: 50%;
+    margin: auto 20px;
   }
 
-  .img02 {
-    grid-column: 2 / 3;
-    grid-row: 1 / 1;
-  }
-
-  .img09 {
-    display: inherit;
+  .arrow:hover {
+    opacity: 1;
   }
 
   /* Passo a passo */
@@ -759,7 +782,7 @@ h2::after {
   /* Autorais */
 
   .autorais {
-    padding-top: 0;
+    padding-top: 60px;
   }
 
   .autorais .text {
@@ -861,29 +884,12 @@ h2::after {
 
   /* Gallery */
 
-  .gallery img {
-    min-height: 387px;
-    height: 100% !important;
-  }
-
-  .img02 {
-    grid-column: 3 / 5;
-    grid-row: 1 / 3;
-  }
-
-  .img07 {
-    grid-column: 3 / 4;
-    grid-row: 3 / 4;
-  }
-
-  .img05 {
-    grid-column: 1 / 3;
-    grid-row: 2 / 4;
-  }
-
-  .img12 {
-    grid-column: 4 / 5;
-    grid-row: 4 / 6;
+  .arrow {
+    top: 480px;
+    width: 70px;
+    height: 70px;
+    padding: 10px 15px;
+    font-size: 1.8rem;
   }
 
   /* Depoimentos */

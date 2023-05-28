@@ -46,8 +46,8 @@
                 <!-- <img class="logo-img" src="assets/logo01.png" alt="Logo Inky Roby"> -->
                 <h1>Especialista em geek tattoo</h1>
                 <div class='flex intro-buttons'>
-                    <a href="#contato"><button class="button-primary" title="Botão que levará a sessão de agendamento">Agendar horário</button></a>
-                    <a href="#galeria"><button class="button-secondary" title="Botão que levará a galeria de fotos">Ver galeria</button></a>
+                    <a href="#contato"><button class="button-primary" title="Agendar horário" alt="Botão que levará aos agendamentos">Agendar horário</button></a>
+                    <a href="#galeria"><button class="button-secondary" title="Ver galeria de imagens" alt="Botão que levará a galeria de fotos">Ver galeria</button></a>
                 </div>
             </article>
             <article>
@@ -75,22 +75,24 @@
         <!-- Galeria --------------------------------------------------->
         <section id="galeria" class="yellow gallery flex">
             <h2>Portfólio</h2>
-            <div>21E0</div>
-            <div>21E2</div>
-            <article class="grid max-container margin-lateral">
-                <img class="img02" id="img02" src="assets/images/tattoo-dama-e-vagabundo.jpg" alt="Tatuagem de Dama de o vagabundo">  <!-- onclick="zoom(img02)" -->
-                <img class="img04" id="img04" src="assets/images/tattoo-zoro.jpg" alt="Tatuagem de Zoro de one piece">  <!-- onclick="zoom(img04)" -->
-                <img class="img05" id="img05" src="assets/images/tattoo-momonosuke2.jpg" alt="Tatuagem de Momonosuke de one piece">  <!-- onclick="zoom(img05)" -->
-                <img class="img07" id="img07" src="assets/images/tattoo-one-piece.jpg" alt="Tatuagem de one piece">  <!-- onclick="zoom(img07)" -->
-                <img class="img09" id="img09" src="assets/images/tattoo-chopper2.jpg" alt="Tatuagem de Chopper de one piece">  <!-- onclick="zoom(img09)" -->
-                <img class="img01" id="img01" src="assets/images/tattoo-boy.jpg" alt="Tatuagem de menino">  <!-- onclick="zoom(img01)" -->
-                <img class="img06" id="img06" src="assets/images/tattoo-cavaleiros.jpg" alt="Tatuagem de Cavaleiros do zodiaco">  <!-- onclick="zoom(img06)" -->
-                <img class="img10" id="img10" src="assets/images/tattoo-luffy2.jpg" alt="Tatuagem de Luffy de one piece">  <!-- onclick="zoom(img10)" -->
-                <img class="img11" id="img11" src="assets/images/tattoo-minnie2.jpg" alt="Tatuagem de Minnie">  <!-- onclick="zoom(img11)" -->
-                <img class="img12" id="img12" src="assets/images/tattoo-mix.jpg" alt="Mix de tatuagens geek">  <!-- onclick="zoom(img12)" -->
-                <img class="img13" id="img13" src="assets/images/tattoo-robot.jpg" alt="Tatuagem de robo">  <!-- onclick="zoom(img13)" -->
-                <img class="img03" id="img03" src="assets/images/tattoo-zoro2.jpg" alt="Tatuagem de Zoro de one piece">  <!-- onclick="zoom(img03)" -->
-            </article>
+            <div class="wrapper max-container">
+                <button class="button-arrow arrow slideLeft" type="button" id="slideLeft">&#10148;</button>
+                <div id="gallery-slide" class="gallery-slide grid">
+                    <img class="child img02" id="img02" src="assets/images/tattoo-dama-e-vagabundo.jpg" alt="Tatuagem de Dama de o vagabundo">  <!-- onclick="zoom(img02)" -->
+                    <img class="child img04" id="img04" src="assets/images/tattoo-zoro.jpg" alt="Tatuagem de Zoro de one piece">  <!-- onclick="zoom(img04)" -->
+                    <img class="child img05" id="img05" src="assets/images/tattoo-momonosuke2.jpg" alt="Tatuagem de Momonosuke de one piece">  <!-- onclick="zoom(img05)" -->
+                    <img class="child img07" id="img07" src="assets/images/tattoo-one-piece.jpg" alt="Tatuagem de one piece">  <!-- onclick="zoom(img07)" -->
+                    <img class="child img09" id="img09" src="assets/images/tattoo-chopper2.jpg" alt="Tatuagem de Chopper de one piece">  <!-- onclick="zoom(img09)" -->
+                    <img class="child img01" id="img01" src="assets/images/tattoo-boy.jpg" alt="Tatuagem de menino">  <!-- onclick="zoom(img01)" -->
+                    <img class="child img06" id="img06" src="assets/images/tattoo-cavaleiros.jpg" alt="Tatuagem de Cavaleiros do zodiaco">  <!-- onclick="zoom(img06)" -->
+                    <img class="child img10" id="img10" src="assets/images/tattoo-luffy2.jpg" alt="Tatuagem de Luffy de one piece">  <!-- onclick="zoom(img10)" -->
+                    <img class="child img11" id="img11" src="assets/images/tattoo-minnie2.jpg" alt="Tatuagem de Minnie">  <!-- onclick="zoom(img11)" -->
+                    <img class="child img12" id="img12" src="assets/images/tattoo-mix.jpg" alt="Mix de tatuagens geek">  <!-- onclick="zoom(img12)" -->
+                    <img class="child img13" id="img13" src="assets/images/tattoo-robot.jpg" alt="Tatuagem de robo">  <!-- onclick="zoom(img13)" -->
+                    <img class="child img03" id="img03" src="assets/images/tattoo-zoro2.jpg" alt="Tatuagem de Zoro de one piece">  <!-- onclick="zoom(img03)" -->
+                </div>
+                <button class="button-arrow arrow slideRight" type="button" id="slideRight">&#10148;</button>
+            </div>
             <button id="showMore" onclick="showMore()" class="button-primary" title="Botão que mostrará mais imagens">Ver mais</button>
         </section>
 
@@ -219,7 +221,7 @@
             </article>
                     
         </div>
-        <a href="#top"><button class="top-button" id="top-button">➣</button></a> <!-- Button para subir ao inicio -->
+        <a href="#top"><button class="button-arrow top-button" id="top-button">➣</button></a> <!-- Button para subir ao inicio -->
     </footer>
 
     <script type="text/javascript" src="script.js"></script>
