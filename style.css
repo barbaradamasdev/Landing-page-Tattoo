@@ -12,7 +12,8 @@
 /* font-family: 'Righteous', cursive; */
 
 :root {
-  --primaryColor: 39, 100%, 46%; /* Orange */
+  --primaryColor: 43, 74%, 49%; /* Dourado */
+  /* --primaryColor: 39, 100%, 46%; */ /* Orange */
   --secondaryColor: 266, 90%, 33%; /* Purple */
   --secondaryColorDarker: 263, 100%, 19%; /* Dark purple */
   --darkColor: 0, 0%, 0%; /* Black */
@@ -124,18 +125,14 @@ section {
 }
 
 .yellow {
-  background-color: hsl(var(--primaryColor), 0.95);
-  /* color: hsl(var(--lightColor)); */
+  background-color: hsl(var(--darkColor), 0.85);
+  color: hsl(var(--lightColor));
 }
 
-/* .yellow .icon-maior,
+.yellow .icon-maior,
 .yellow .icon-menor {
   filter: invert(85%) sepia(97%) saturate(5060%) hue-rotate(335deg)
     brightness(103%) contrast(104%);
-} */
-
-.purple {
-  background-color: hsl(var(--secondaryColor));
 }
 
 .shadow {
