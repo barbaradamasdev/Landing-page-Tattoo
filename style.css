@@ -241,7 +241,7 @@ nav .links li:focus {
   margin-bottom: 2px;
 }
 
-nav a {
+nav .secondary a {
   color: hsl(var(--lightColor));
   text-transform: uppercase;
 }
