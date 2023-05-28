@@ -125,7 +125,7 @@ section {
 
 .yellow {
   background-color: hsl(var(--primaryColor), 0.95);
-  color: hsl(var(--lightColor));
+  /* color: hsl(var(--lightColor)); */
 }
 
 /* .yellow .icon-maior,
