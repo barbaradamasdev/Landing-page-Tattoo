@@ -1,24 +1,28 @@
 # Landing-page-Tattoo
 
-![Design preview for the Space tourism website coding challenge](./preview.jpg) 
+![Design preview for desktop version](./print1.png) 
 
-## 🔗 Link
+## 🔗 Links
 
-- [Live Version](https://barbaradamasdev.github.io/Landing-page-Tattoo/)
+- [Live Version for project](https://barbaradamasdev.github.io/Landing-page-Tattoo/)
+- [Active Version](https://inkroby.com/)
 
-## 😄 Hello there!
+## 😄 Olá
 
-Esse foi meu primeiro projeto freelancer real. Utilizei conhecimentos de HTML, CSS e Javascript para criar um portfolio de tatuagem.
+Esse foi meu primeiro projeto freelancer real. Utilizei conhecimentos de HTML, CSS e Javascript para criar um portfolio de tatuagem. Foquei no site final:
+- Layout responsivo, mobile first
+- Galeria com scroll horizontal
+- Animações no menu hamburguer
+- Flexbox e grid display
 
-## 💾 Technologies Used:
+## 💾 Linguagens utilizadas
 
 - HTML
 - CSS
-- Flexbox
-- Grid
 - JavaScript
-- Responsive layout
 
-## 🐼 Author
+![Design preview for mobile version](./print2.jpg) 
+
+## 🐼 Autora
 
 Bárbara Damasceno - barbaradamas.dev@gmail.com
