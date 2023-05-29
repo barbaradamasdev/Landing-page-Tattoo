@@ -824,7 +824,7 @@ footer #logo {
   .depoimentos .box {
     width: 37vw;
     max-width: 360px;
-    margin: auto;
+    margin: 0 auto;
   }
 
   /* Contato */
@@ -855,6 +855,8 @@ footer #logo {
     width: 55px;
     height: 55px;
     font-size: 2rem;
+    background-color: hsl(var(--secondaryColor));
+    border: 3px solid hsl(var(--secondaryColor));
   }
 
   .agenda {
