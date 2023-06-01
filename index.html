@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tatuagem geek em Recife. Fazemos anime, super herois além de trabalhos em fineline. Veja alguns nos meus trabalhos e vem marcar a pele com uma arte autoral e personalida.">
     <link rel="preload" href="https://inkroby.com/assets/logo2.png" as="image">
+    <link rel="preload" href="https://inkroby.com/assets/logo2.webp" as="image">
     <link rel="preload" href="https://inkroby.com/assets/images/tattoo-zoro2.jpg" as="image">
     <link rel="icon" type="image/x-icon" href="/assets/icons/favicon.ico">
     <link rel="stylesheet" href="style.css">
@@ -45,7 +46,11 @@
         <!-- Intro / topo ---------------------------------------------------->
        <section id="topo" class="flex intro max-container margin-lateral">
             <article class="text flex">
-                <img loading="lazy" class="logo-img" src="assets/logo2.png" alt="Logo Inky Roby">
+                <picture>
+                    <source media="(max-width: 400px)" srcset="assets/logo2.webp">
+                    <img class="logo-img" src="assets/logo2.png" alt="Logo Inky Roby">
+                </picture>
+                <!-- <img loading="lazy" class="logo-img" src="assets/logo2.png" alt="Logo Inky Roby"> -->
                 <!-- <img loading="lazy" class="logo-img" src="assets/logo01.png" alt="Logo Inky Roby"> -->
                 <h1>Especialista em geek tattoo</h1>
                 <div class='flex intro-buttons'>
