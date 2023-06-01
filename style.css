@@ -178,7 +178,7 @@ button:hover {
   bottom: -150px;
   z-index: 1;
   border-radius: 50%;
-  background: hsl(var(--primaryColor)) url(assets/bg-manga.jpg) no-repeat 30%
+  background: hsl(var(--primaryColor)) url(assets/bg-manga1.jpg) no-repeat 30%
     40%;
   width: 300px;
   height: 300px;
